@@ -1,12 +1,3 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-
-@import url('./header.css');
-
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -22,3 +13,89 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 20px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search-form button:hover {
+  background-color: #004080;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* .photo-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+} */
+
+/* .photo-card img {
+  width: 100%;
+  height: auto;
+} */
+
+.info {
+  padding: 10px;
+}
+
+.info-item {
+  margin: 5px 0;
+}
+
+/* .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: #007bff;
+} */
+ .loader {
+   display: none;
+ }
+
+.hidden {
+       display: none;
+     }
