@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    
-    <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-12/assets/index-a5ca5ae8.css">
-  </head>
-  <body>
-    
 
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Search</title>
 
+  
+  <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-b11e2a50.js">
+  <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-4b066c51.css">
+  <link rel="stylesheet" href="/goit-js-hw-12/assets/index-f5a1100d.css">
+</head>
 
-    
-  </body>
+<body>
+  <header>
+    <form id="search-form" class="search-form">
+      <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+      <button type="submit">Search</button>
+    </form>
+  </header>
+  <main>
+    <div class="gallery"></div>
+    <button class="load-more hidden">Load more</button>
+    <div class="loader">Loading...</div>
+  </main>
+  
+</body>
+
 </html>
