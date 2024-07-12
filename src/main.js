@@ -1,4 +1,3 @@
-
 import { fetchImages } from './js/pixabay-api.js';
 import { renderImages, clearGallery, showNotification } from './js/render-functions.js';
 
@@ -33,7 +32,9 @@ searchForm.addEventListener('submit', async (e) => {
     }
     
     renderImages(data.hits);
-    loadMoreBtn.classList.remove('hidden');
+    if (data.hits.length === 15) {
+      loadMoreBtn.classList.remove('hidden');
+    }
   } catch (error) {
     loader.classList.add('hidden');
     showNotification('Failed to fetch images. Please try again later.', 'error');
@@ -55,6 +56,10 @@ loadMoreBtn.addEventListener('click', async () => {
     }
     
     renderImages(data.hits);
+    if (data.hits.length < 15) {
+      loadMoreBtn.classList.add('hidden');
+      showNotification('No more images available.', 'info');
+    }
     smoothScroll();
   } catch (error) {
     loader.classList.add('hidden');
@@ -72,3 +77,4 @@ function smoothScroll() {
     behavior: 'smooth',
   });
 }
+
